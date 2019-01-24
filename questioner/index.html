@@ -1,0 +1,1152 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Questioner Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all.js"></script>
+  </head>
+
+  <body class="questioner questioner_index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#overview" class="toc-h2 toc-link" data-title="Overview">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#response-codes" class="toc-h2 toc-link" data-title="Response codes">Response codes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#register" class="toc-h2 toc-link" data-title="Register">Register</a>
+                  </li>
+                  <li>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Login">Login</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-token" class="toc-h2 toc-link" data-title="Refresh Token">Refresh Token</a>
+                  </li>
+                  <li>
+                    <a href="#profile" class="toc-h2 toc-link" data-title="Profile">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#logout" class="toc-h2 toc-link" data-title="Logout">Logout</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#meetups" class="toc-h1 toc-link" data-title="Meetups">Meetups</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-meetup" class="toc-h2 toc-link" data-title="Create Meetup">Create Meetup</a>
+                  </li>
+                  <li>
+                    <a href="#all-meetups" class="toc-h2 toc-link" data-title="All Meetups">All Meetups</a>
+                  </li>
+                  <li>
+                    <a href="#upcoming-meetups" class="toc-h2 toc-link" data-title="Upcoming Meetups">Upcoming Meetups</a>
+                  </li>
+                  <li>
+                    <a href="#specific-meetup" class="toc-h2 toc-link" data-title="Specific Meetup">Specific Meetup</a>
+                  </li>
+                  <li>
+                    <a href="#update-meetup-tags" class="toc-h2 toc-link" data-title="Update Meetup Tags">Update Meetup Tags</a>
+                  </li>
+                  <li>
+                    <a href="#rsvp" class="toc-h2 toc-link" data-title="RSVP">RSVP</a>
+                  </li>
+                  <li>
+                    <a href="#meetup-attendees" class="toc-h2 toc-link" data-title="Meetup Attendees">Meetup Attendees</a>
+                  </li>
+                  <li>
+                    <a href="#delete-meetup" class="toc-h2 toc-link" data-title="Delete Meetup">Delete Meetup</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#questions" class="toc-h1 toc-link" data-title="Questions">Questions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-question" class="toc-h2 toc-link" data-title="Post Question">Post Question</a>
+                  </li>
+                  <li>
+                    <a href="#fetch-questions" class="toc-h2 toc-link" data-title="Fetch Questions">Fetch Questions</a>
+                  </li>
+                  <li>
+                    <a href="#upvote-question" class="toc-h2 toc-link" data-title="Upvote Question">Upvote Question</a>
+                  </li>
+                  <li>
+                    <a href="#downvote-question" class="toc-h2 toc-link" data-title="Downvote Question">Downvote Question</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#comments" class="toc-h1 toc-link" data-title="Comments">Comments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-comment" class="toc-h2 toc-link" data-title="Post Comment">Post Comment</a>
+                  </li>
+                  <li>
+                    <a href="#fetch-comments" class="toc-h2 toc-link" data-title="Fetch Comments">Fetch Comments</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1><h2 id='overview'>Overview</h2>
+<p>Welcome to the Questioner documentation. Questioner helps meetup organizers to prioritize questions to be answered through crowd sourcing.</p>
+
+<p>You can use the Questioner API to access Questioner endpoints which are categorized into:</p>
+
+<ul>
+<li>Users</li>
+<li>Meetups</li>
+<li>Questions</li>
+<li>Comments</li>
+</ul>
+
+<p>You can view the request and response formats in the dark area to the right.</p>
+
+<p>For the remainder of this document, <strong>hostname</strong> refers to the server you will be using to access the API. To access the API endpoints, replace every instance of <strong>hostname</strong> with <code>http://questioner-server.herokuapp.com</code></p>
+<h2 id='response-codes'>Response codes</h2>
+<p>The response codes for the API are:</p>
+
+<table><thead>
+<tr>
+<th>CODE</th>
+<th>MEANING</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>OK</code> - The request was successful</td>
+</tr>
+<tr>
+<td>201</td>
+<td><code>CREATED</code> - The resource was successfully created</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>BAD REQUEST</code> - The request could not be processed</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>UNAUTHORIZED</code> - The authentication failed for the request</td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>FORBIDDEN</code> - The request was denied</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>NOT FOUND</code> - The requested resource was not found</td>
+</tr>
+<tr>
+<td>405</td>
+<td><code>METHOD NOT ALLOWED</code> - The http method for the request is not allowed</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>CONFLICT</code> - The request could not be completed due to a conflict with an existing resource</td>
+</tr>
+</tbody></table>
+<h1 id='authentication'>Authentication</h1>
+<p>This contains the Endpoints that are used for authentication in the platform</p>
+<h2 id='register'>Register</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"firstname"</span> : <span class="s2">"Vincent"</span>,
+    <span class="s2">"lastname"</span> : <span class="s2">"Tirgei"</span>,
+    <span class="s2">"othername"</span> : <span class="s2">""</span>,
+    <span class="s2">"username"</span> : <span class="s2">"vinny"</span>,
+    <span class="s2">"email"</span> : <span class="s2">"vin@gmail.com"</span>,
+    <span class="s2">"password"</span> : <span class="s2">"asfD3#sdg"</span>,
+    <span class="s2">"phonenumber"</span> : <span class="s2">"0712345678"</span>
+<span class="o">}</span>
+</code></pre>
+<p>Creates an account on the platform for a new user.</p>
+<h3 id='http-request'>HTTP request</h3>
+<p>To create an account send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/auth/signup</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"id"</span>: 3,
+    <span class="s2">"firstname"</span>: <span class="s2">"Chris"</span>,
+    <span class="s2">"othername"</span>: null,
+    <span class="s2">"email"</span>: <span class="s2">"doe@gmail.com"</span>,
+    <span class="s2">"lastname"</span>: <span class="s2">"Doe"</span>,
+    <span class="s2">"registered"</span>: <span class="s2">"2019-01-24T09:56:09.174461+00:00"</span>,
+    <span class="s2">"username"</span>: <span class="s2">"doe"</span>,
+    <span class="s2">"phonenumber"</span>: null
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 201,
+  <span class="s2">"message"</span>: <span class="s2">"User created successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there is invalid data</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"password"</span>: <span class="o">[</span>
+      <span class="s2">"Invalid password"</span>
+    <span class="o">]</span>,
+    <span class="s2">"email"</span>: <span class="o">[</span>
+      <span class="s2">"Not a valid email address."</span>,
+      <span class="s2">"Invalid email format"</span>
+    <span class="o">]</span>,
+    <span class="s2">"lastname"</span>: <span class="o">[</span>
+      <span class="s2">"This parameter cannot be null"</span>
+    <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 400,
+  <span class="s2">"message"</span>: <span class="s2">"Invalid data provided"</span>
+<span class="o">}</span>
+</code></pre><h2 id='login'>Login</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"username"</span> : <span class="s2">"vinny"</span>,
+    <span class="s2">"password"</span> : <span class="s2">"asfD3#sdg"</span>
+<span class="o">}</span>
+</code></pre>
+<p>Logs in a registered user into the platform</p>
+<h3 id='http-request-2'>HTTP request</h3>
+<p>To login send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/auth/login</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"access_token"</span>: <span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDgzMTY4NzQsIm5iZiI6MTU0ODMxNjg3NCwianRpIjoiNWI2ZmUwMWMtNGYwNy00NTE0LTg4OTctMTY1ZWQxY2ExYmJkIiwiZXhwIjoxNTQ4MzE3Nzc0LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.Dd64OMbfES9RJUZfx7Hwht4e2AA2JndBzzn7J1Y3Mgo"</span>,
+  <span class="s2">"refresh_token"</span>: <span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDgzMTY4NzQsIm5iZiI6MTU0ODMxNjg3NCwianRpIjoiZTYxZTZiOGUtZDBkZi00ZTBmLWJkODktZTU2MmJkYjY2NDcxIiwiZXhwIjoxNTUwOTA4ODc0LCJpZGVudGl0eSI6dHJ1ZSwidHlwZSI6InJlZnJlc2gifQ.B9_nN_8DRw-MV60NxBsfIGn0R5ZKBfRSoKEEAUMAdpM"</span>,
+  <span class="s2">"user_id"</span>: 1,
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"User logged in successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the user doesn&#39;t exist</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 404,
+  <span class="s2">"message"</span>: <span class="s2">"User not found"</span>
+<span class="o">}</span>
+</code></pre><h2 id='refresh-token'>Refresh Token</h2>
+<p>Generates a new access token for a logged in user</p>
+<h3 id='http-request-3'>HTTP request</h3>
+<p>To refresh the access token send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/auth/refresh-token</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Token refreshed successfully"</span>,
+  <span class="s2">"access_token"</span>: <span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDgzMjU2MjMsIm5iZiI6MTU0ODMyNTYyMywianRpIjoiYjY5NGVhMTMtMjdmNy00Y2E0LWFmMTQtM2VhODYwYzlkZGM3IiwiZXhwIjoxNTQ4MzI2NTIzLCJpZGVudGl0eSI6dHJ1ZSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.sj85Ro59_cZOHfqr0r6YKHhuXY4BNoq7duIbihIGHEQ"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you pass an access token</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"message"</span>: <span class="s2">"Only refresh tokens are allowed"</span>,
+  <span class="s2">"status"</span>: 401
+<span class="o">}</span>
+</code></pre><h3 id='authentication-2'>Authentication</h3>
+<p><code>Authorization: Bearer refresh-token</code></p>
+<h2 id='profile'>Profile</h2>
+<p>Fetches a users profile</p>
+<h3 id='http-request-4'>HTTP request</h3>
+<p>To get the profile send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/profile/&lt;int:user_id&gt;</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"id"</span>: 1,
+    <span class="s2">"questions_commented"</span>: 0,
+    <span class="s2">"firstname"</span>: <span class="s2">"Vincent"</span>,
+    <span class="s2">"lastname"</span>: <span class="s2">"Tirgei"</span>,
+    <span class="s2">"questions_asked"</span>: 1,
+    <span class="s2">"username"</span>: <span class="s2">"tirgei"</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the user does not exist</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"message"</span>: <span class="s2">"User not found"</span>,
+  <span class="s2">"status"</span>: 404
+<span class="o">}</span>
+</code></pre><h2 id='logout'>Logout</h2>
+<p>Logs out a user from the platform</p>
+<h3 id='http-request-5'>HTTP request</h3>
+<p>To logout send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/auth/logout</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Logged out successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you try to logout again</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"message"</span>: <span class="s2">"Token has been revoked"</span>,
+  <span class="s2">"status"</span>: 401
+<span class="o">}</span>
+</code></pre><h3 id='authentication-3'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h1 id='meetups'>Meetups</h1>
+<p>This contains the Endpoints for meetups in the platform</p>
+<h2 id='create-meetup'>Create Meetup</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"topic"</span> : <span class="s2">"Python"</span>,
+    <span class="s2">"description"</span> : <span class="s2">"Flask API"</span>,
+    <span class="s2">"happening_on"</span> : <span class="s2">"27/01/2019"</span>,
+    <span class="s2">"location"</span> : <span class="s2">"Andela"</span>,
+    <span class="s2">"tags"</span>: <span class="o">[</span><span class="s2">"Python"</span>, <span class="s2">"Andela"</span>, <span class="s2">"Flask"</span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<p>Creates an new meetup</p>
+
+<aside class="notice">
+Only an admin user can create meetup
+</aside>
+<h3 id='http-request-6'>HTTP request</h3>
+<p>To create a meetup send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"id"</span>: 2,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>,
+    <span class="s2">"happening_on"</span>: <span class="s2">"27/01/2019"</span>,
+    <span class="s2">"topic"</span>: <span class="s2">"Python"</span>,
+    <span class="s2">"description"</span>: <span class="s2">"Flask API"</span>,
+    <span class="s2">"tags"</span>: <span class="o">[</span>
+      <span class="s2">"Python"</span>,
+      <span class="s2">"Andela"</span>,
+      <span class="s2">"Flask"</span>
+    <span class="o">]</span>,
+    <span class="s2">"location"</span>: <span class="s2">"Andela"</span>,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 201,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup created successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there is invalid data</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"location"</span>: <span class="o">[</span>
+      <span class="s2">"Missing data for required field."</span>
+    <span class="o">]</span>,
+    <span class="s2">"topic"</span>: <span class="o">[</span>
+      <span class="s2">"This parameter cannot be null"</span>
+    <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 400,
+  <span class="s2">"message"</span>: <span class="s2">"Invalid data provided"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you aren&#39;t the admin user</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 401,
+  <span class="s2">"message"</span>: <span class="s2">"Only admin is authorized to perform this operation"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-4'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='all-meetups'>All Meetups</h2>
+<p>Fetch a list of all meetups in the platform</p>
+<h3 id='http-request-7'>HTTP request</h3>
+<p>To fetch all meetups send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"data"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"id"</span>: 2,
+      <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>,
+      <span class="s2">"happening_on"</span>: <span class="s2">"27/01/2019"</span>,
+      <span class="s2">"topic"</span>: <span class="s2">"Python"</span>,
+      <span class="s2">"description"</span>: <span class="s2">"Flask API"</span>,
+      <span class="s2">"tags"</span>: <span class="o">[</span>
+        <span class="s2">"Python"</span>,
+        <span class="s2">"Andela"</span>,
+        <span class="s2">"Flask"</span>
+      <span class="o">]</span>,
+      <span class="s2">"location"</span>: <span class="s2">"Andela"</span>,
+      <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there are no meetups</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"data"</span>: <span class="o">[]</span>
+<span class="o">}</span>
+</code></pre><h2 id='upcoming-meetups'>Upcoming Meetups</h2>
+<p>Fetch a list of upcoming meetups in the platform. The upcoming meetups are meetups that are happening in the next 7 days from the time of request.</p>
+<h3 id='http-request-8'>HTTP request</h3>
+<p>To fetch upcoming meetups send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups/upcoming</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"data"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"id"</span>: 2,
+      <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>,
+      <span class="s2">"happening_on"</span>: <span class="s2">"27/01/2019"</span>,
+      <span class="s2">"topic"</span>: <span class="s2">"Python"</span>,
+      <span class="s2">"description"</span>: <span class="s2">"Flask API"</span>,
+      <span class="s2">"tags"</span>: <span class="o">[</span>
+        <span class="s2">"Python"</span>,
+        <span class="s2">"Andela"</span>,
+        <span class="s2">"Flask"</span>
+      <span class="o">]</span>,
+      <span class="s2">"location"</span>: <span class="s2">"Andela"</span>,
+      <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T08:01:59.791241+00:00"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there are no meetups</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"data"</span>: <span class="o">[]</span>
+<span class="o">}</span>
+</code></pre><h2 id='specific-meetup'>Specific Meetup</h2>
+<p>Fetch a specific meetup</p>
+<h3 id='http-request-9'>HTTP request</h3>
+<p>To fetch a specific meetup send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups/&lt;int:meetup_id&gt;</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"id"</span>: 1,
+    <span class="s2">"attendees"</span>: 0,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T07:59:15.921493+00:00"</span>,
+    <span class="s2">"happening_on"</span>: <span class="s2">"10/10/2019"</span>,
+    <span class="s2">"topic"</span>: <span class="s2">"JS"</span>,
+    <span class="s2">"description"</span>: <span class="s2">"IoS"</span>,
+    <span class="s2">"tags"</span>: <span class="o">[</span>
+      <span class="s2">"Python"</span>,
+      <span class="s2">"Andela"</span>,
+      <span class="s2">"Flask"</span>
+    <span class="o">]</span>,
+    <span class="s2">"location"</span>: <span class="s2">"Andela"</span>,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T07:59:15.921493+00:00"</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the meetup does not exist</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"message"</span>: <span class="s2">"Meetup not found"</span>,
+  <span class="s2">"status"</span>: 404
+<span class="o">}</span>
+</code></pre><h2 id='update-meetup-tags'>Update Meetup Tags</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"tags"</span>: <span class="o">[</span><span class="s2">"Python"</span>, <span class="s2">"Andela"</span>, <span class="s2">"Flask"</span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<p>Updates the tags for a meetup</p>
+
+<aside class="notice">
+Only an admin user can update the meetup tags
+</aside>
+<h3 id='http-request-10'>HTTP request</h3>
+<p>To update meetup tags send a <strong>PATCH</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups&lt;int:meetup_id&gt;/tags</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"happening_on"</span>: <span class="s2">"05/05/2020"</span>,
+    <span class="s2">"description"</span>: <span class="s2">"Python Microframework"</span>,
+    <span class="s2">"id"</span>: 1,
+    <span class="s2">"tags"</span>: <span class="o">[</span>
+      <span class="s2">"Python"</span>,
+      <span class="s2">"Flask"</span>,
+      <span class="s2">"Andela"</span>,
+      <span class="s2">"Technology"</span>
+    <span class="o">]</span>,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-20T22:01:09.158737+00:00"</span>,
+    <span class="s2">"topic"</span>: <span class="s2">"Flask"</span>,
+    <span class="s2">"location"</span>: <span class="s2">"Andela HQ"</span>,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-20T22:01:09.158737+00:00"</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup tags updated successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If not tags is passed</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 400,
+  <span class="s2">"message"</span>: <span class="s2">"You need to pass atleast 1 tag for the meetup"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you aren&#39;t the admin user</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 401,
+  <span class="s2">"message"</span>: <span class="s2">"Only admin is authorized to perform this operation"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-5'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='rsvp'>RSVP</h2>
+<p>Allows a user to rsvp to an upcoming meetup.</p>
+
+<aside class="notice">
+The available options are yes, no and maybe
+</aside>
+<h3 id='http-request-11'>HTTP request</h3>
+<p>To rsvp to a meetup send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups/&lt;int:meetup_id&gt;/&lt;string:rsvp&gt;</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"response"</span>: <span class="s2">"yes"</span>,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T11:02:39.962365+00:00"</span>,
+    <span class="s2">"user_id"</span>: 1,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T11:02:39.962365+00:00"</span>,
+    <span class="s2">"meetup_id"</span>: 3
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup rsvp successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If an invalid rsvp is passed</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 400,
+  <span class="s2">"message"</span>: <span class="s2">"Invalid rsvp"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you had already responded to the meetup</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 403,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup already responded"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-6'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='meetup-attendees'>Meetup Attendees</h2>
+<p>Fetch a list of users who are attending a meetup</p>
+<h3 id='http-request-12'>HTTP request</h3>
+<p>To fetch all meetups send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups/&lt;int:meetup_id&gt;/attendees</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"attendees"</span>: 1,
+  <span class="s2">"users"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"firstname"</span>: <span class="s2">"Vincent"</span>,
+      <span class="s2">"id"</span>: 1,
+      <span class="s2">"username"</span>: <span class="s2">"tirgei"</span>,
+      <span class="s2">"lastname"</span>: <span class="s2">"Tirgei"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there are no attendees</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"attendees"</span>: 0,
+  <span class="s2">"users"</span>: <span class="o">[]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre><h2 id='delete-meetup'>Delete Meetup</h2>
+<p>Delete a new meetup</p>
+
+<aside class="notice">
+Only an admin user can delete a meetup
+</aside>
+<h3 id='http-request-13'>HTTP request</h3>
+<p>To delete a meetup send a <strong>DELETE</strong> request to:</p>
+
+<p><code>hostname/api/v2/meetups/&lt;int:meetup_id&gt;</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup deleted successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the meetup does not exists</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 404,
+  <span class="s2">"message"</span>: <span class="s2">"Meetup not found"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you aren&#39;t the admin user</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 401,
+  <span class="s2">"message"</span>: <span class="s2">"Only admin is authorized to perform this operation"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-7'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h1 id='questions'>Questions</h1>
+<p>This contains the Endpoints for Questions for meetups</p>
+<h2 id='post-question'>Post Question</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"title"</span> : <span class="s2">"JS"</span>,
+    <span class="s2">"body"</span> : <span class="s2">"TDD"</span>,
+    <span class="s2">"meetup_id"</span> : 3
+<span class="o">}</span>
+</code></pre>
+<p>Posts a new question to a meetup</p>
+<h3 id='http-request-14'>HTTP request</h3>
+<p>To post a question send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/questions</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"meetup_id"</span>: 3,
+    <span class="s2">"body"</span>: <span class="s2">"TDD"</span>,
+    <span class="s2">"title"</span>: <span class="s2">"JS"</span>,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T19:15:45.809437+00:00"</span>,
+    <span class="s2">"id"</span>: 6,
+    <span class="s2">"votes"</span>: 0,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T19:15:45.809437+00:00"</span>,
+    <span class="s2">"user_id"</span>: 4
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 201,
+  <span class="s2">"message"</span>: <span class="s2">"Question posted successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there is invalid data</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"body"</span>: <span class="o">[</span>
+      <span class="s2">"Missing data for required field."</span>
+    <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 400,
+  <span class="s2">"message"</span>: <span class="s2">"Invalid data provided"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-8'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='fetch-questions'>Fetch Questions</h2>
+<p>Fetch all questions posted for a specific meetup</p>
+<h3 id='http-request-15'>HTTP request</h3>
+<p>To fetch meetup questions send a <strong>GET</strong> request to</p>
+
+<p><code>hostname/api/v2/meetups/&lt;int:meetup_id&gt;/questions</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"meetup_id"</span>: 3,
+      <span class="s2">"body"</span>: <span class="s2">"Python for beginners?"</span>,
+      <span class="s2">"title"</span>: <span class="s2">"Coding"</span>,
+      <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T12:44:36.437292+00:00"</span>,
+      <span class="s2">"id"</span>: 2,
+      <span class="s2">"votes"</span>: 0,
+      <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T12:44:36.437292+00:00"</span>,
+      <span class="s2">"user_id"</span>: 1
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"meetup_id"</span>: 3,
+      <span class="s2">"body"</span>: <span class="s2">"TDD"</span>,
+      <span class="s2">"title"</span>: <span class="s2">"JS"</span>,
+      <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T12:45:22.672153+00:00"</span>,
+      <span class="s2">"id"</span>: 3,
+      <span class="s2">"votes"</span>: 0,
+      <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T12:45:22.672153+00:00"</span>,
+      <span class="s2">"user_id"</span>: 1
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there are no questions posted for the meetup</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">[]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the meetup does not exist
+<code>shell
+{
+  &quot;status&quot;: 404,
+  &quot;message&quot;: &quot;Meetup not found&quot;
+}
+</code></p>
+</blockquote>
+<h2 id='upvote-question'>Upvote Question</h2>
+<p>Upvotes a meetup question</p>
+<h3 id='http-request-16'>HTTP request</h3>
+<p>To upvote a question, send a <strong>PATCH</strong> request to:</p>
+
+<p><code>hostname/api/v2/questions/&lt;int:question_id&gt;/upvote</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"meetup_id"</span>: 3,
+    <span class="s2">"body"</span>: <span class="s2">"TDD"</span>,
+    <span class="s2">"title"</span>: <span class="s2">"JS"</span>,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T13:38:58.716166+00:00"</span>,
+    <span class="s2">"id"</span>: 5,
+    <span class="s2">"votes"</span>: 1,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T13:38:58.716166+00:00"</span>,
+    <span class="s2">"user_id"</span>: 4
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Question upvoted successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you have already upvoted the question</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 403,
+  <span class="s2">"message"</span>: <span class="s2">"You have already voted for this question"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-9'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='downvote-question'>Downvote Question</h2>
+<p>Downvotes a meetup question</p>
+<h3 id='http-request-17'>HTTP request</h3>
+<p>To downvote a question, send a <strong>PATCH</strong> request to:</p>
+
+<p><code>hostname/api/v2/questions/&lt;int:question_id&gt;/downvote</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"meetup_id"</span>: 3,
+    <span class="s2">"body"</span>: <span class="s2">"TDD"</span>,
+    <span class="s2">"title"</span>: <span class="s2">"JS"</span>,
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T12:48:01.605004+00:00"</span>,
+    <span class="s2">"id"</span>: 4,
+    <span class="s2">"votes"</span>: -1,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T12:48:01.605004+00:00"</span>,
+    <span class="s2">"user_id"</span>: 4
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 200,
+  <span class="s2">"message"</span>: <span class="s2">"Question downvoted successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If you have already downvoted the question</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: 403,
+  <span class="s2">"message"</span>: <span class="s2">"You have already voted for this question"</span>
+<span class="o">}</span>
+</code></pre><h3 id='authentication-10'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h1 id='comments'>Comments</h1>
+<p>This contains the Endpoints for Comments to meetup questions</p>
+<h2 id='post-comment'>Post Comment</h2>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"body"</span> : <span class="s2">"What time is the meetup?"</span>
+<span class="o">}</span>
+</code></pre>
+<p>Posts a new comment to a meetup question</p>
+<h3 id='http-request-18'>HTTP request</h3>
+<p>To post a comment send a <strong>POST</strong> request to:</p>
+
+<p><code>hostname/api/v2/questions/int:question_id&gt;/comments</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T12:47:51.439767+00:00"</span>,
+    <span class="s2">"id"</span>: 1,
+    <span class="s2">"question_id"</span>: 3,
+    <span class="s2">"body"</span>: <span class="s2">"What time is the meetup?"</span>,
+    <span class="s2">"user_id"</span>: 4,
+    <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T12:47:51.439767+00:00"</span>
+  <span class="o">}</span>,
+  <span class="s2">"status"</span>: 201,
+  <span class="s2">"message"</span>: <span class="s2">"Comment posted successfully"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the question does not exist</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"message"</span>: <span class="s2">"Token has expired"</span>,
+  <span class="s2">"status"</span>: 401
+<span class="o">}</span>
+</code></pre><h3 id='authentication-11'>Authentication</h3>
+<p><code>Authorization: Bearer access-token</code></p>
+<h2 id='fetch-comments'>Fetch Comments</h2>
+<p>Fetch all comments posted for a specific meetup question</p>
+<h3 id='http-request-19'>HTTP request</h3>
+<p>To fetch comments for a meetup question send a <strong>GET</strong> request to:</p>
+
+<p><code>hostname/api/v2/questions/&lt;int:question_id&gt;/comments</code></p>
+
+<blockquote>
+<p>The response you receive should be</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"created_at"</span>: <span class="s2">"2019-01-24T12:47:51.439767+00:00"</span>,
+      <span class="s2">"id"</span>: 1,
+      <span class="s2">"question_id"</span>: 3,
+      <span class="s2">"body"</span>: <span class="s2">"What time is the meetup?"</span>,
+      <span class="s2">"user_id"</span>: 4,
+      <span class="s2">"modified_at"</span>: <span class="s2">"2019-01-24T12:47:51.439767+00:00"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If there are no comments posted for the meetup question</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">[]</span>,
+  <span class="s2">"status"</span>: 200
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>If the meetup question does not exist
+<code>shell
+{
+  &quot;status&quot;: 404,
+  &quot;message&quot;: &quot;Question not found&quot;
+}
+</code></p>
+</blockquote>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
